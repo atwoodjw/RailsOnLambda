@@ -1,24 +1,29 @@
-# README
+# RailsOnLambda
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Just Because You Can, Doesn't Mean You Should
 
-Things you may want to cover:
+This is a POC for a simple Rails app, deployed as an AWS Lambda function.
 
-* Ruby version
+###### Prerequisites
 
-* System dependencies
+* [Docker](https://docs.docker.com/docker-for-mac/install/)
+* [Serverless](https://serverless.com/framework/docs/getting-started/)
 
-* Configuration
+###### Deployment
 
-* Database creation
+* Bundle Install
 
-* Database initialization
+ ```
+ docker run -v `pwd`:`pwd` -w `pwd` -i -t lambci/lambda:build-ruby2.5 bundle install --deployment
+ ```
 
-* How to run the test suite
+* Serverless Deploy
 
-* Services (job queues, cache servers, search engines, etc.)
+ ```
+ serverless deploy
+ ```
 
-* Deployment instructions
+###### References
 
-* ...
+* [docker-lambda](https://github.com/lambci/docker-lambda/)
+* [serverless-sinatra-sample](https://github.com/aws-samples/serverless-sinatra-sample)
