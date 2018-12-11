@@ -1,0 +1,5 @@
+.bundle
+.serverless
+log
+tmp
+vendor

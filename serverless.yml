@@ -1,0 +1,19 @@
+service: railsonlambda
+
+provider:
+  name: aws
+  runtime: ruby2.5
+
+functions:
+  railsonlambda:
+    handler: lambda.handler
+    environment:
+      RAILS_ENV: production
+      RAILS_LOG_TO_STDOUT: true
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY

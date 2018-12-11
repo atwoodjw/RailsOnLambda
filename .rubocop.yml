@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+LineLength:
+  Max: 240
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
